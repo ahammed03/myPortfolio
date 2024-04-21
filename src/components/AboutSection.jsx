@@ -4,9 +4,9 @@ import AboutMe from "../assets/images/about-me.jpg"
 export default function AboutSection() {
 
     return (
-        <div className="w-full h-[60vh] flex justify-center items-center gap-4" >
+        <div className="w-full  flex flex-col md:flex-row justify-center items-center gap-4 p-5" >
             <img className="w-72" src={AboutMe} alt="" />
-            <div className=" w-[50vw] flex flex-col gap-1">
+            <div className=" md:w-[50vw] flex flex-col gap-1">
                 <p>
                     Hey there! I'm Ahammed Ali Shaik, a software enthusiast based in Bengaluru. I completed my Bachelor's degree (BTech) from MITS, where I discovered my passion for building software.
                 </p>

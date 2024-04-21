@@ -44,11 +44,11 @@ export default function ProjectsSection() {
 
 function ProjectComponent({ title, description, codeLink ,imageLink}) {
     return (
-        <div className="flex h-[40vh] gap-5 items-center w-[80%] p-3 border-b-2 mb-1">
-            <img className='h-[95%] w-[40%] rounded-md' src={imageLink} alt="" />
+        <div className="flex-col md:flex-row flex md:h-[40vh] lg:h-auto gap-5 items-center w-[80%] p-3 border-b-2 mb-1">
+            <img className='h-[95%] md:w-[40%] rounded-md' src={imageLink} alt="" />
             <div className="space-y-1.5">
                 <h3 className="text-xl font-semibold text-blue-600">{title}</h3>
-                <p>{description}</p>
+                <p className='text-justify'>{description}</p>
                 <a href={codeLink} className='flex gap-1 items-center font-semibold'>Code <img src={GitHub} alt="GitHubIcon" /></a>
             </div>
         </div>
