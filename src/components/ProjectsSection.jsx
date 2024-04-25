@@ -49,7 +49,7 @@ function ProjectComponent({ title, description, codeLink ,imageLink}) {
             <div className="space-y-1.5">
                 <h3 className="text-xl font-semibold text-blue-600">{title}</h3>
                 <p className='text-justify'>{description}</p>
-                <a href={codeLink} className='flex gap-1 items-center font-semibold'>Code <img src={GitHub} alt="GitHubIcon" /></a>
+                <a href={codeLink} className='flex gap-1 items-center font-semibold'><img src={GitHub} alt="GitHubIcon" /></a>
             </div>
         </div>
     )
