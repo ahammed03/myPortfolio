@@ -1,10 +1,19 @@
 import GitHub from '../assets/icons/icons8-github-30.png'
 import chatBotImg1 from '../assets/projectsImages/ChatBot.png'
 import tailorFlowImg from '../assets/projectsImages/TailorFlow.png'
+import githubExplorerImg from '../assets/projectsImages/githubExplorer.png'
 
 export default function ProjectsSection() {
 
     const projectsData = [
+        {
+            'title': 'GitHub Explorer',
+            'description': ` A GitHub Explorer application using React.js, Recoil for state management and GitHub API.
+                            Implemented features to display user repositories, views, forks, followers etc.
+                            `,
+            'codeLink': 'https://github.com/ahammed03/GithubExplorer.git',
+            'imageLink': githubExplorerImg
+        }, 
         {
             'title': 'Chatbot using Gemini AI',
             'description': `
@@ -13,7 +22,7 @@ export default function ProjectsSection() {
                             enhancing user experiences
                             `,
             'codeLink': 'https://github.com/ahammed03/chatbot.git',
-            'imageLink' :chatBotImg1
+            'imageLink': chatBotImg1
         },
         {
             'title': 'TailorFlow',
@@ -23,9 +32,10 @@ export default function ProjectsSection() {
                             solution for tailoring businesses, optimizing their workflow and enhancing customer satisfaction.
                             `,
             'codeLink': 'https://github.com/ahammed03/TailorFlow1.git',
-            'imageLink' : tailorFlowImg
+            'imageLink': tailorFlowImg
         },
-        
+
+
     ]
 
     return (
@@ -34,7 +44,7 @@ export default function ProjectsSection() {
             <h2 className='text-2xl font-bold'>Projects</h2>
             {
                 projectsData.map((project, index) => (
-                    <ProjectComponent key={index} title={project.title} description={project.description} codeLink={project.codeLink} imageLink ={project.imageLink}/>
+                    <ProjectComponent key={index} title={project.title} description={project.description} codeLink={project.codeLink} imageLink={project.imageLink} />
                 ))
             }
 
@@ -42,7 +52,7 @@ export default function ProjectsSection() {
     )
 }
 
-function ProjectComponent({ title, description, codeLink ,imageLink}) {
+function ProjectComponent({ title, description, codeLink, imageLink }) {
     return (
         <div className="flex-col md:flex-row flex md:h-[40vh] lg:h-auto gap-5 items-center w-[80%] p-3 border-b-2 mb-1">
             <img className='h-[95%] md:w-[40%] rounded-md' src={imageLink} alt="" />
